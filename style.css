@@ -754,6 +754,14 @@ label.checkbtn {
         right: 0;
     }
 
+    #accueil .header-content .content-text {
+        padding-top: 4rem;
+    }
+
+    #accueil .header-content img {
+        width: 400px;
+    }
+
     #evenement .evenement-content .row {
         grid-template-columns: 1fr;
     }
@@ -780,6 +788,7 @@ label.checkbtn {
         margin: auto;
     }
 }
+
 
 
 /* Responsive Mobile End */
