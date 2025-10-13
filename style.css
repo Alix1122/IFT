@@ -754,12 +754,8 @@ label.checkbtn {
         right: 0;
     }
 
-    #accueil .header-content .content-text {
-        padding-top: 4rem;
-    }
-
     #accueil .header-content img {
-        width: 400px;
+        display: none;
     }
 
     #evenement .evenement-content .row {
@@ -792,3 +788,4 @@ label.checkbtn {
 
 
 /* Responsive Mobile End */
+
