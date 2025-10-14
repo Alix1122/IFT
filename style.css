@@ -674,7 +674,7 @@ label.checkbtn {
     }
 
     #accueil .header-content img {
-        width: 100%;
+        width: 400px;
         margin: 5rem auto 0;
     }
 
@@ -691,9 +691,6 @@ label.checkbtn {
         margin-top: 1rem;
     }
 
-    #accueil .header-content img {
-        width: 400px;
-    }
     
     #about .container .about-content h3 {
         font-size: 40px;
@@ -792,4 +789,5 @@ label.checkbtn {
 
 
 /* Responsive Mobile End */
+
 
