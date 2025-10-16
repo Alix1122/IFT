@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: hsl(193, 92%, 15%);
+    --secondary-color: #19936f;
+    --gray-color: #4a4a4d;
+    --bg-color: #ecf0f3;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-attachment: fixed;
+}
+
+html, 
+body {
+    scrollbar-width: none;
+}
+
+h1, 
+h2 {
+    font-family: "Poppins", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Utility classes */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.text-primary {
+    color: var(--secondary-color);
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 10px;
+    transition: all ease .3s;
+}
+
+.btn-primary:hover {
+    background-color: #169c74;
+}
+
+/* Header Start */
+
+#accueil {
+    background-color: var(--bg-color);
+    height: 100vh;
+    width: 100%;
+}
+
+#accueil .navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+#accueil .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem 2rem;
+}
+
+#accueil .navbar nav #logo img {
+    width: 80px;
+}
+
+#accueil .navbar nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#accueil .navbar nav ul a {
+    margin: 0 15px;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: all .3s ease;
+}
+
+#accueil .navbar nav ul a:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#accueil .header-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    max-width: 1200px;
+    margin: auto;
+    height: 100%;
+    padding: 5rem 2rem 0;
+    align-items: center;
+}
+
+#accueil .header-content .content-text .title {
+    color: var(--primary-color);
+    font-size: 40px;
+    font-weight: 600;
+    margin: 10px 0;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+#accueil .header-content .content-text .paragraphe {
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+#accueil .header-content .content-text button {
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.75em;
+    background: var(--primary-color);
+}
+
+#accueil .header-content .content-text button .button {
+    box-sizing: border-box;
+    border: 2px solid var(--primary-color);
+    border-radius: 0.75em;
+    padding: 0.75em 1.5em;
+    background: #e8e8e8;
+    color: var(--primary-color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+}
+
+#accueil .header-content .content-text button:hover {
+    transform: translateY(-0.33rem);
+}
+
+#accueil .header-content .content-text button:active {
+    transform: translateY(0);
+}
+
+#accueil .header-content img {
+    width: 500px;
+}
+
+/* Header End */
+
+/* Watssap logo Start */
+
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    transition-duration: 0.3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #00d757;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.btn a {
+    align-items: center;
+}
+
+.sign {
+    width: 100%;
+    transition-duration: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 25px;
+}
+
+.sign svg path {
+    fill: white;
+}
+.text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: 0.3s;
+    align-items: center;
+    line-height: 4px;
+}
+
+.Btn:hover {
+    width: 150px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+}
+
+.Btn:hover .sign {
+    width: 30%;
+    transition-duration: 0.3s;
+    padding-left: 10px;
+}
+
+.Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: 0.3s;
+    padding-right: 10px;
+}
+.Btn:active {
+    transform: translate(2px, 2px);
+}
+
+
+/* Watssap logo End */
+
+/* About Start */
+
+#about {
+    padding: 6rem 0;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--primary-color);
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+#about hr {
+    background-color: var(--secondary-color);
+    width: 100px;
+    height: 3px;
+    border: none;
+    margin: 5px auto 0;
+}
+
+#about .container .about-content {
+    margin-top: 4rem;
+    align-items: center;
+    text-align: center;
+}
+
+#about .container .about-content h3 {
+    font-size: 50px;
+    font-weight: 700;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    color: var(--primary-color);
+}
+
+#about .container .about-content p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--gray-color);
+}
+
+/* About End */
+
+/* Formation Start */
+
+#formation {
+    padding: 6rem 0;
+    background-color: var(--primary-color);
+}
+
+#formation h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-family: "Poppins", sans-serif;
+}
+
+#formation hr {
+    width: 100px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border: none;
+    margin: 5px auto 0;
+}
+
+#formation .formation-content .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4rem;
+    text-align: center;
+    column-gap: 2rem;
+}
+
+#formation .formation-content .row .item {
+    background-color: #e9e9e9;
+    padding: 30px 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    transition: 400ms;
+}
+
+#formation .formation-content .row .item:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#formation .row:hover > .item:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+}
+
+#formation .formation-content .row .item img {
+    width: 200px;
+}
+
+#formation .formation-content .row .item h3 {
+    color: var(--primary-color);
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* Formation End */
+
+/* evenement Start */
+
+
+#evenement {
+    padding: 6rem 0;
+    background-color: #ddd;
+}
+
+#evenement h2 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-family: "Poppins", sans-serif;
+}
+
+#evenement hr {
+    width: 100px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border: none;
+    margin: 5px auto 0;
+}
+
+#evenement .evenement-content .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 4rem;
+    text-align: center;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+#evenement .evenement-content .row .item {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #f1fcff;
+    border-radius: 5px;
+    transition: 400ms;
+    padding: 0.5rem;
+}
+
+#evenement .evenement-content .row .item:hover {
+    transform: scale(1.1, 1.1);
+}
+
+#evenement .evenement-content .row .item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* evenement End */
+
+/* Contact Start */
+
+#contact {
+    padding: 6rem 0 4rem;
+    background-color: #00f4ab0C;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 40px;
+    color: var(--primary-color);
+    font-weight: 800;
+    letter-spacing: 3px;
+    font-family: "Poppins", sans-serif;
+}
+
+#contact hr {
+    width: 100px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border: none;
+    margin: 5px auto 0;
+}
+
+#contact .container .row {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    background-color: #fff;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 2rem 3rem;
+}
+
+#contact .container .row input, #contact .container .row textarea {
+    display: block;
+    width: 100%;
+    margin: 20px 0;
+    padding: 10px;
+    outline: none;
+    background-color: #00f4ab0C;
+    border: 1px solid #bbb;
+}
+
+.bt {
+    border: none;
+    user-select: none;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    background-color: #0873bd;
+    box-shadow: #cacaca 2px 2px 10px 1px;
+    border-radius: 12px;
+    height: 50px;
+    line-height: 50px;
+    width: 140px;
+    transition: all 0.2s ease;
+    position: relative;
+    cursor: pointer;
+}
+
+.msg {
+    height: 0;
+    width: 0;
+    border-radius: 2px;
+    position: absolute;
+    left: 15%;
+    top: 25%;
+}
+
+.bt:active {
+    transition: all 0.001s ease;
+    background-color: #5d9fcd;
+    box-shadow: #97989a 0 0 0 0;
+    transform: translateX(1px) translateY(1px);
+}
+
+.bt:hover .msg {
+    animation: msgRun 2s forwards;
+}
+
+@keyframes msgRun {
+    0% {
+        border-top: #d6d6d9 0 solid;
+        border-bottom: #f2f2f5 0 solid;
+        border-left: #f2f2f5 0 solid;
+        border-right: #f2f2f5 0 solid;
+    }
+
+    20% {
+        border-top: #d6d6d9 14px solid;
+        border-bottom: #f2f2f5 14px solid;
+        border-left: #f2f2f5 20px solid;
+        border-right: #f2f2f5 20px solid;
+    }
+
+    25% {
+        border-top: #d6d6d9 12px solid;
+        border-bottom: #f2f2f5 12px solid;
+        border-left: #f2f2f5 18px solid;
+        border-right: #f2f2f5 18px solid;
+    }
+
+    80% {
+        border-top: transparent 12px solid;
+        border-bottom: transparent 12px solid;
+        border-left: transparent 18px solid;
+        border-right: transparent 18px solid;
+    }
+
+    100% {
+        transform: translateX(100px);
+        border-top: transparent 12px solid;
+        border-bottom: transparent 12px solid;
+        border-left: transparent 18px solid;
+        border-right: transparent 18px solid;
+    }
+}
+
+/* Contact End */
+
+/* Footer Start */
+
+#footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Footer End */
+
+
+
+/* From Uiverse.io by david-mohseni */ 
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #000;
+    border-radius: 50%;
+    margin: 0 10px;
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+}
+
+.wrapper .linkdin:hover,
+.wrapper .linkdin:hover .tooltip,
+.wrapper .linkdin:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #df3333;
+    color: #fff;
+}
+
+.wrapper .icon a {
+    text-decoration: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+label.checkbtn {
+    font-size: 30px;
+    color: var(--primary-color);
+    float: right;
+    line-height: 70px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+
+
+
+/* Responsive Tablet Start */
+
+@media (max-width: 1050px) {
+    #accueil .header-content {  
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+    }
+
+    #accueil .header-content img {
+        width: 100%;
+        margin: 5rem auto 0;
+    }
+
+    #about .container,
+    #formation .formation-content .row,
+    #contact .container .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        row-gap: 2rem;
+    }
+
+    #about .container .about-content {
+        margin-top: 1rem;
+    }
+
+        #accueil .header-content img {
+            width: 400px;
+        }
+    
+    #about .container .about-content h3 {
+        font-size: 40px;
+        margin-bottom: 2rem;
+    }
+
+    #formation .container .formation-content {
+        width: 70%;
+        margin: auto;
+    }
+
+    #evenement .evenement-content .row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #contact .container .row img {
+        margin: auto;
+    }
+
+    #contact .container .row form {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+/* Responsive Tablet End */
+
+/* Responsive Mobile Start */
+
+@media (max-width: 714px) {
+    #accueil .navbar nav {
+        display: block;
+    }
+
+    #accueil .navbar nav .checkbtn {
+        display: block;
+    }
+
+    #accueil .navbar nav ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #ccc;
+        display: block;
+        top: 80px;
+        right: -100%;
+        text-align: center;
+        padding: 3rem 0 0;
+        transition: all.5s ;
+    }
+
+    #accueil .navbar nav ul li {
+        margin: 30px 0;
+        line-height: 100px;
+    }
+
+    #accueil .navbar nav ul li a {
+        font-size: 30px;
+    }
+
+    #accueil .navbar nav #check:checked ~ ul {
+        right: 0;
+    }
+
+    #accueil .header-content img {
+        display: none;
+    }
+
+    #evenement .evenement-content .row {
+        grid-template-columns: 1fr;
+    }
+
+    #contact .container .row img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 370px) {
+    #accueil .header-content .content-text h1, 
+    #about .container h2, 
+    #about .container .about-content h3, 
+    #formation .container h2, 
+    #formation .container .formation-content h3, 
+    #evenement .container h2,
+    #contact .container h2 {
+        font-size: 30px;
+    }
+
+    #formation .container .formation-content .row .item img, 
+    #evenement .container .evenement-content .row .item img {
+        width: 100%;
+        margin: auto;
+    }
+}
+
+
+/* Responsive Mobile End */
