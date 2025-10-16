@@ -777,6 +777,13 @@ label.checkbtn {
     #contact .container .row img {
         width: 100%;
     }
+
+    #footer .wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+    }
 }
 
 @media (max-width: 370px) {
@@ -800,3 +807,4 @@ label.checkbtn {
 
 
 /* Responsive Mobile End */
+
