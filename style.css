@@ -291,6 +291,7 @@ a {
     font-size: 18px;
     font-weight: 500;
     color: var(--gray-color);
+    padding: 0 20px;
 }
 
 /* About End */
@@ -795,6 +796,7 @@ label.checkbtn {
         margin: auto;
     }
 }
+
 
 
 /* Responsive Mobile End */
